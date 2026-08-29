@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Politique de confidentialité de GLORIA, jeu mobile de gestion d'école de gladiateurs.">
+<meta name="robots" content="index, follow">
+<title>Confidentialité GLORIA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap">
+
+<style>
+:root{
+  --ground:#EDEEEA;
+  --surface:#F8F9F6;
+  --ink:#1E231F;
+  --muted:#5C6259;
+  --accent:#3A6B5C;
+  --accent-soft:#E2EAE5;
+  --warn:#8C3A2E;
+  --warn-soft:#F4E7E4;
+  --rule:#D6D9D1;
+  --shadow:0 1px 2px rgba(30,35,31,.05);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#141815;
+    --surface:#1B211D;
+    --ink:#E3E7E0;
+    --muted:#99A196;
+    --accent:#77B29D;
+    --accent-soft:#1E2C27;
+    --warn:#DE9C8E;
+    --warn-soft:#2C201D;
+    --rule:#2B332D;
+    --shadow:none;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#141815;
+  --surface:#1B211D;
+  --ink:#E3E7E0;
+  --muted:#99A196;
+  --accent:#77B29D;
+  --accent-soft:#1E2C27;
+  --warn:#DE9C8E;
+  --warn-soft:#2C201D;
+  --rule:#2B332D;
+  --shadow:none;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  background:var(--ground);
+  color:var(--ink);
+  font-family:"Alegreya Sans","Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:17px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+
+.wrap{
+  max-width:1160px;
+  margin:0 auto;
+  padding:0 28px 96px;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:0 56px;
+}
+
+/* ---------- masthead ---------- */
+.masthead{
+  grid-column:1/-1;
+  border-bottom:1px solid var(--rule);
+  padding:56px 0 28px;
+  margin-bottom:44px;
+}
+.eyebrow{
+  font-size:12px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--accent);
+  font-weight:700;
+  margin:0 0 14px;
+}
+h1{
+  font-family:Cinzel,Georgia,"Times New Roman",serif;
+  font-weight:600;
+  font-size:clamp(30px,5vw,44px);
+  line-height:1.14;
+  letter-spacing:.01em;
+  margin:0 0 20px;
+  text-wrap:balance;
+}
+.meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px 26px;
+  font-size:14.5px;
+  color:var(--muted);
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+.meta b{color:var(--ink);font-weight:500}
+
+/* ---------- table of contents ---------- */
+nav.toc{display:none}
+
+/* ---------- article ---------- */
+article{min-width:0;max-width:68ch}
+
+section{
+  padding-bottom:40px;
+  margin-bottom:40px;
+  border-bottom:1px solid var(--rule);
+}
+section:last-of-type{border-bottom:0}
+
+h2{
+  font-family:Cinzel,Georgia,serif;
+  font-weight:600;
+  font-size:23px;
+  line-height:1.24;
+  letter-spacing:.005em;
+  margin:0 0 18px;
+  text-wrap:balance;
+  scroll-margin-top:24px;
+}
+h2 .num{
+  color:var(--accent);
+  font-variant-numeric:tabular-nums;
+  margin-right:.5em;
+}
+h3{
+  font-family:"Alegreya Sans",sans-serif;
+  font-weight:700;
+  font-size:17.5px;
+  letter-spacing:.01em;
+  margin:30px 0 10px;
+  color:var(--ink);
+}
+h3 .sub{
+  color:var(--muted);
+  font-weight:500;
+  font-variant-numeric:tabular-nums;
+  margin-right:.45em;
+}
+
+p{margin:0 0 15px}
+p:last-child{margin-bottom:0}
+strong{font-weight:700}
+em{font-style:italic;color:var(--muted)}
+
+ul{margin:0 0 15px;padding-left:0;list-style:none}
+ul li{
+  position:relative;
+  padding-left:20px;
+  margin-bottom:7px;
+}
+ul li::before{
+  content:"";
+  position:absolute;
+  left:2px;top:.72em;
+  width:5px;height:5px;
+  background:var(--accent);
+  transform:rotate(45deg);
+}
+
+a{color:var(--accent);text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:1px}
+
+code{
+  font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  font-size:.88em;
+  background:var(--accent-soft);
+  color:var(--ink);
+  padding:.1em .38em;
+  border-radius:2px;
+}
+
+/* ---------- asides : les deux paragraphes qui peuvent surprendre ---------- */
+.note{
+  background:var(--surface);
+  border:1px solid var(--rule);
+  border-left:3px solid var(--accent);
+  border-radius:2px;
+  padding:18px 20px;
+  margin:20px 0;
+  box-shadow:var(--shadow);
+}
+.note.warn{border-left-color:var(--warn);background:var(--warn-soft)}
+.note.warn strong{color:var(--warn)}
+.note p:last-child{margin-bottom:0}
+.note .tag{
+  display:block;
+  font-size:11.5px;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  font-weight:700;
+  color:var(--accent);
+  margin-bottom:9px;
+}
+.note.warn .tag{color:var(--warn)}
+
+/* ---------- tables ---------- */
+.tablewrap{overflow-x:auto;margin:20px 0;-webkit-overflow-scrolling:touch}
+table{
+  border-collapse:collapse;
+  width:100%;
+  min-width:520px;
+  font-size:15.5px;
+  font-variant-numeric:tabular-nums;
+}
+th,td{
+  text-align:left;
+  padding:10px 14px 10px 0;
+  border-bottom:1px solid var(--rule);
+  vertical-align:top;
+}
+th{
+  font-size:11.5px;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  color:var(--muted);
+  font-weight:700;
+  border-bottom-color:var(--ink);
+  padding-bottom:8px;
+}
+tbody tr:last-child td{border-bottom:0}
+td:first-child{color:var(--ink);font-weight:500;padding-right:22px}
+td:not(:first-child){color:var(--muted)}
+
+/* ---------- contact ---------- */
+.contact{
+  background:var(--surface);
+  border:1px solid var(--rule);
+  border-radius:2px;
+  padding:24px 26px;
+  box-shadow:var(--shadow);
+}
+.contact address{font-style:normal;line-height:1.75}
+.contact .name{font-weight:700}
+
+footer{
+  grid-column:1/-1;
+  border-top:1px solid var(--rule);
+  margin-top:8px;
+  padding-top:22px;
+  font-size:13.5px;
+  color:var(--muted);
+}
+
+/* ---------- large screens : sommaire collant ---------- */
+@media (min-width:1000px){
+  .wrap{grid-template-columns:216px minmax(0,1fr)}
+  nav.toc{
+    display:block;
+    align-self:start;
+    position:sticky;
+    top:32px;
+    padding-top:4px;
+  }
+  nav.toc .tag{
+    font-size:11.5px;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--muted);
+    margin:0 0 14px;
+  }
+  nav.toc ol{
+    list-style:none;
+    margin:0;padding:0;
+    counter-reset:toc;
+    font-size:14.5px;
+    line-height:1.42;
+  }
+  nav.toc li{margin-bottom:11px}
+  nav.toc a{
+    color:var(--muted);
+    text-decoration:none;
+    display:flex;
+    gap:9px;
+  }
+  nav.toc a::before{
+    counter-increment:toc;
+    content:counter(toc);
+    color:var(--accent);
+    font-variant-numeric:tabular-nums;
+    min-width:14px;
+  }
+  nav.toc a:hover{color:var(--ink)}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="eyebrow">Politique de confidentialité</p>
+    <h1>GLORIA</h1>
+    <ul class="meta">
+      <li>Application <b>com.lbalass.gloria</b></li>
+      <li>Éditeur <b>Ludovic Balasso</b></li>
+      <li>Dernière mise à jour <b>29 août 2026</b></li>
+    </ul>
+  </header>
+
+  <nav class="toc" aria-label="Sommaire">
+    <p class="tag">Sommaire</p>
+    <ol>
+      <li><a href="#s1">Les données que nous traitons</a></li>
+      <li><a href="#s2">Pourquoi nous les traitons</a></li>
+      <li><a href="#s3">À qui elles sont transmises</a></li>
+      <li><a href="#s4">Combien de temps</a></li>
+      <li><a href="#s5">Vos droits</a></li>
+      <li><a href="#s6">Enfants</a></li>
+      <li><a href="#s7">Sécurité</a></li>
+      <li><a href="#s8">Modifications</a></li>
+      <li><a href="#s9">Contact</a></li>
+    </ol>
+  </nav>
+
+  <article>
+
+    <section>
+      <h2>Qui est responsable de vos données</h2>
+      <p>L'application <strong>GLORIA</strong> (<code>com.lbalass.gloria</code>) est éditée par <strong>Ludovic Balasso</strong>, 1110 route du Charbinat, 38510 Arandon-Passins, France, ci-après « nous ».</p>
+      <p>Pour toute question ou demande concernant vos données : <a href="mailto:gloria.dev.app@gmail.com">gloria.dev.app@gmail.com</a>. Nous répondons sous 30 jours.</p>
+
+      <div class="note">
+        <span class="tag">En résumé</span>
+        <p>GLORIA est un jeu <strong>en ligne obligatoire</strong>. Vous n'avez pas besoin de créer de compte pour jouer : à la première ouverture, un <strong>compte anonyme</strong> est créé automatiquement. Vous pouvez ensuite le lier à un compte Google pour retrouver votre école sur un autre appareil.</p>
+        <p>Nous ne vendons aucune donnée. Nous ne demandons ni votre nom, ni votre adresse, ni votre téléphone, ni votre date de naissance.</p>
+      </div>
+    </section>
+
+    <section id="s1">
+      <h2><span class="num">1.</span>Les données que nous traitons</h2>
+
+      <h3><span class="sub">1.1</span>Identifiant de compte</h3>
+      <p>À la première ouverture, Firebase Authentication crée un <strong>identifiant anonyme</strong> — une suite de caractères sans rapport avec votre identité. C'est ce qui rattache votre école à vous.</p>
+      <p>Si vous <strong>liez un compte Google</strong> (facultatif, depuis Paramètres → Compte), nous conservons en plus <strong>l'adresse e-mail</strong> de ce compte. Elle sert uniquement à retrouver votre école quand vous changez d'appareil ; elle n'est jamais affichée aux autres joueurs, jamais utilisée pour vous écrire à des fins commerciales, et jamais transmise à un tiers.</p>
+
+      <h3><span class="sub">1.2</span>Votre partie</h3>
+      <p>Votre progression est sauvegardée en ligne pour ne pas être perdue : gladiateurs, niveaux, équipement, monnaies, avancement de campagne, missions, passe de saison, réglages.</p>
+
+      <h3><span class="sub">1.3</span>Ce que les autres joueurs voient</h3>
+      <p>Le mode <strong>Classé</strong> oppose de vraies écoles. Pour que d'autres joueurs puissent vous affronter, un extrait de votre école est publié dans un annuaire <strong>lisible par tout joueur connecté au jeu</strong> :</p>
+      <ul>
+        <li>le <strong>nom de votre école</strong> et son <strong>emblème</strong> ;</li>
+        <li>vos <strong>trophées</strong>, votre <strong>ligue</strong> et vos titres d'Immortel ;</li>
+        <li>vos <strong>cinq meilleurs gladiateurs</strong> : leur nom, leur classe, leur niveau, leurs statistiques et leur équipement ;</li>
+        <li>votre <strong>code d'ami</strong>, qui permet de vous défier ;</li>
+        <li>un <strong>indicateur de présence</strong> : l'heure de votre dernier passage sur l'écran du défi. C'est lui qui vous affiche « en ligne » chez vos amis.</li>
+      </ul>
+
+      <div class="note warn">
+        <span class="tag">À lire avant de nommer votre école</span>
+        <p><strong>Le nom de votre école et celui de vos gladiateurs sont publics.</strong> N'y mettez aucune donnée personnelle : ni votre nom réel, ni votre adresse e-mail, ni rien qui permette de vous identifier. Vous pouvez changer le nom de votre école à tout moment depuis Paramètres.</p>
+        <p>Votre adresse e-mail, elle, n'est <strong>jamais</strong> publiée dans cet annuaire.</p>
+      </div>
+
+      <h3><span class="sub">1.4</span>Défis entre amis, liste d'amis et présence</h3>
+      <p>Le défi se joue <strong>en direct</strong> : les deux joueurs regardent le combat au même moment. Quand vous ouvrez un défi, un document de duel est créé — les deux écoles concernées, le combat calculé, l'instant de départ commun et les émoticônes échangées pendant le combat. Il n'est lisible que par les <strong>deux joueurs du duel</strong>, et il expire de lui-même.</p>
+      <p><strong>Votre liste d'amis ne quitte jamais votre appareil.</strong> Elle vit dans votre sauvegarde, n'est publiée nulle part, et personne ne peut savoir qui vous y avez ajouté.</p>
+      <p><strong>La présence, en revanche, est publique</strong> au même titre que le reste de votre fiche d'annuaire (§ 1.3). Concrètement : une seule valeur, l'heure de votre dernier passage sur l'écran du défi. Elle est écrasée à chaque mise à jour — nous ne gardons aucun historique de vos horaires de jeu — et elle disparaît avec votre fiche d'annuaire. « En ligne » signifie donc « cette personne est sur l'écran du défi en ce moment », et rien de plus : le jeu ne dit jamais si votre téléphone est allumé ni ce que vous faites ailleurs.</p>
+      <p><strong>C'est votre code d'ami qui décide.</strong> Le donner à quelqu'un, c'est accepter qu'il vous voie en ligne et vous défie. Ne le publiez pas si vous ne le souhaitez pas.</p>
+
+      <h3><span class="sub">1.5</span>Mesures d'usage</h3>
+      <p>Nous enregistrons des <strong>événements de jeu anonymes</strong> pour comprendre ce qui fonctionne et corriger ce qui coince : première ouverture, étapes du tutoriel, fin de combat, coffre ouvert, énergie épuisée, achat, publicité regardée, ouverture de la passe de saison, plantage.</p>
+      <p>Cette liste est <strong>fermée dans le code</strong> : un événement qui n'y figure pas n'est pas envoyé. Les propriétés jointes sont elles aussi limitées à une liste fermée — mode de jeu, format, durée, rareté, montant. <strong>Le jeton d'achat Google en est explicitement exclu.</strong></p>
+      <p>Ces mesures sont rattachées à votre identifiant de compte, pas à votre nom.</p>
+
+      <h3><span class="sub">1.6</span>Achats</h3>
+      <p>Les achats passent par <strong>Google Play Billing</strong>. Nous ne voyons <strong>jamais</strong> votre numéro de carte ni vos coordonnées bancaires : ils sont traités par Google et ne transitent pas par nous. Nous recevons de Google un jeton d'achat, qui sert uniquement à vous créditer ce que vous avez acheté.</p>
+
+      <h3><span class="sub">1.7</span>Publicité</h3>
+      <p>Le jeu propose des <strong>publicités récompensées</strong> — toujours à votre initiative, jamais imposées. Elles sont diffusées par <strong>Google AdMob</strong>, qui peut utiliser un identifiant publicitaire pour choisir les annonces et mesurer leur diffusion. Vous pouvez réinitialiser ou supprimer cet identifiant dans les réglages Android (<em>Paramètres → Confidentialité → Annonces</em>).</p>
+      <p>Politique de confidentialité de Google, qui couvre AdMob : <a href="https://policies.google.com/privacy" rel="noopener">policies.google.com/privacy</a></p>
+    </section>
+
+    <section id="s2">
+      <h2><span class="num">2.</span>Pourquoi nous traitons ces données</h2>
+      <div class="tablewrap">
+        <table>
+          <thead>
+            <tr><th scope="col">Donnée</th><th scope="col">Pourquoi</th><th scope="col">Base légale (RGPD)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Identifiant anonyme, sauvegarde</td><td>fournir le jeu, ne pas perdre votre partie</td><td>exécution du contrat</td></tr>
+            <tr><td>E-mail du compte lié</td><td>retrouver votre école sur un autre appareil</td><td>exécution du contrat</td></tr>
+            <tr><td>Annuaire public des écoles</td><td>permettre le mode Classé et les défis</td><td>exécution du contrat</td></tr>
+            <tr><td>Indicateur de présence</td><td>savoir si un ami peut jouer un défi maintenant</td><td>exécution du contrat</td></tr>
+            <tr><td>Mesures d'usage</td><td>corriger les défauts, régler l'équilibrage</td><td>intérêt légitime</td></tr>
+            <tr><td>Achats</td><td>vous livrer ce que vous avez payé, obligations comptables</td><td>contrat, obligation légale</td></tr>
+            <tr><td>Publicité</td><td>financer la version gratuite</td><td>consentement</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="s3">
+      <h2><span class="num">3.</span>À qui vos données sont transmises</h2>
+      <p>Nous ne vendons ni ne louons vos données. Elles sont traitées par :</p>
+      <ul>
+        <li><strong>Google Firebase</strong> (Authentication, Cloud Firestore) — compte et sauvegarde ;</li>
+        <li><strong>Google Play Billing</strong> — achats ;</li>
+        <li><strong>Google AdMob</strong> — publicités récompensées ;</li>
+        <li><strong>les autres joueurs</strong>, pour les seules informations du § 1.3.</li>
+      </ul>
+      <p>Ces services peuvent traiter des données hors de l'Union européenne. Google s'appuie pour cela sur les clauses contractuelles types de la Commission européenne.</p>
+    </section>
+
+    <section id="s4">
+      <h2><span class="num">4.</span>Combien de temps</h2>
+      <div class="tablewrap">
+        <table>
+          <thead>
+            <tr><th scope="col">Donnée</th><th scope="col">Durée</th><th scope="col">Précision</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Sauvegarde et compte</td><td>24 mois</td><td>après votre dernière connexion. Passé ce délai, la sauvegarde, la fiche d'annuaire et les duels sont supprimés.</td></tr>
+            <tr><td>Mesures d'usage</td><td>14 mois</td><td>—</td></tr>
+            <tr><td>Justificatifs d'achat</td><td>10 ans</td><td>durée imposée par les obligations comptables françaises. Ils ne contiennent aucune coordonnée bancaire.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="s5">
+      <h2><span class="num">5.</span>Vos droits</h2>
+      <p>Vous pouvez à tout moment demander l'<strong>accès</strong> à vos données, leur <strong>rectification</strong>, leur <strong>suppression</strong>, leur <strong>portabilité</strong>, ou vous <strong>opposer</strong> à leur traitement.</p>
+
+      <h3>Supprimer votre compte et vos données</h3>
+      <p>Depuis le jeu : <strong>Paramètres → Compte → Supprimer mon compte</strong>. La suppression est immédiate.</p>
+      <p>Ou par écrit à <a href="mailto:gloria.dev.app@gmail.com">gloria.dev.app@gmail.com</a>, depuis l'adresse liée à votre compte, ou en indiquant votre <strong>code d'ami</strong> si votre compte est anonyme. Nous supprimons alors sous 30 jours votre sauvegarde, votre fiche d'annuaire, vos duels et vos mesures d'usage.</p>
+
+      <div class="note warn">
+        <span class="tag">Irréversible</span>
+        <p><strong>La suppression est définitive.</strong> Votre progression, vos gladiateurs et vos achats non consommés sont perdus et ne peuvent pas être restaurés.</p>
+      </div>
+
+      <p>Vous pouvez aussi vous déconnecter à tout moment (Paramètres → Compte) : cet appareil repart alors sur une école vide, mais votre école reste en ligne.</p>
+      <p>Si vous estimez que vos droits ne sont pas respectés, vous pouvez saisir la CNIL (<a href="https://www.cnil.fr" rel="noopener">cnil.fr</a>) ou l'autorité de contrôle de votre pays.</p>
+    </section>
+
+    <section id="s6">
+      <h2><span class="num">6.</span>Enfants</h2>
+      <p>GLORIA est destiné aux joueurs de <strong>16 ans et plus</strong>. Nous ne collectons pas sciemment de données concernant une personne plus jeune. Si vous êtes parent et pensez que votre enfant nous a transmis des données, écrivez-nous : nous les supprimerons.</p>
+      <p>Pourquoi 16 et non 15 : le RGPD laisse chaque pays de l'Union européenne fixer entre 13 et 16 ans l'âge auquel un mineur consent seul au traitement de ses données — la publicité récompensée, notamment. La France a retenu 15 ans, d'autres pays 16. <strong>16 ans est le plafond</strong> : au-delà, aucun pays de l'Union n'exige l'accord d'un parent. Nous n'avons donc jamais à vous le demander, où que vous viviez en Europe.</p>
+    </section>
+
+    <section id="s7">
+      <h2><span class="num">7.</span>Sécurité</h2>
+      <p>Les échanges avec nos serveurs passent par HTTPS. L'accès à votre sauvegarde est protégé par des règles de sécurité Firestore : votre document de sauvegarde n'est lisible et modifiable que par votre compte. Seules les informations du § 1.3 sont volontairement lisibles par les autres joueurs.</p>
+      <p>Aucun système n'est infaillible : nous ne pouvons pas garantir une sécurité absolue.</p>
+    </section>
+
+    <section id="s8">
+      <h2><span class="num">8.</span>Modifications</h2>
+      <p>Nous pouvons modifier cette politique. La date en haut de page indique la dernière mise à jour. En cas de changement important, nous vous en informerons dans le jeu avant qu'il ne prenne effet.</p>
+    </section>
+
+    <section id="s9">
+      <h2><span class="num">9.</span>Contact</h2>
+      <div class="contact">
+        <address>
+          <span class="name">Ludovic Balasso</span><br>
+          1110 route du Charbinat<br>
+          38510 Arandon-Passins, France<br>
+          <a href="mailto:gloria.dev.app@gmail.com">gloria.dev.app@gmail.com</a>
+        </address>
+      </div>
+    </section>
+
+  </article>
+
+  <footer>
+    GLORIA — <code>com.lbalass.gloria</code> · Politique de confidentialité du 29 août 2026.
+  </footer>
+
+</div>
+</body>
+</html>
