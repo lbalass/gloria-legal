@@ -311,7 +311,7 @@ footer{
     <ul class="meta">
       <li>Application <b>com.lbalass.gloria</b></li>
       <li>Éditeur <b>Ludovic Balasso</b></li>
-      <li>Dernière mise à jour <b>29 août 2026</b></li>
+      <li>Dernière mise à jour <b>30 août 2026</b></li>
     </ul>
   </header>
 
@@ -372,7 +372,10 @@ footer{
 
       <h3><span class="sub">1.4</span>Défis entre amis, liste d'amis et présence</h3>
       <p>Le défi se joue <strong>en direct</strong> : les deux joueurs regardent le combat au même moment. Quand vous ouvrez un défi, un document de duel est créé — les deux écoles concernées, le combat calculé, l'instant de départ commun et les émoticônes échangées pendant le combat. Il n'est lisible que par les <strong>deux joueurs du duel</strong>, et il expire de lui-même.</p>
-      <p><strong>Votre liste d'amis ne quitte jamais votre appareil.</strong> Elle vit dans votre sauvegarde, n'est publiée nulle part, et personne ne peut savoir qui vous y avez ajouté.</p>
+      <p><strong>Vos amitiés sont enregistrées en ligne, et voici exactement où.</strong> Quand vous demandez quelqu'un en ami, un document est créé qui porte vos deux identifiants de compte, vos deux noms d'école et l'état de la demande : en attente, acceptée, refusée, ou rompue. Il n'est lisible que par <strong>vous deux</strong> — aucun autre joueur ne peut savoir qui figure dans votre liste.</p>
+      <p>C'est ce document, et lui seul, qui permet à l'autre appareil d'apprendre que vous avez accepté sa demande, ou que vous l'avez retiré de vos amis. Sans lui, un retrait ne vaudrait que pour vous et l'autre continuerait de vous voir dans ses amis.</p>
+      <p>Ces documents s'effacent d'eux-mêmes : <strong>7 jours</strong> pour une demande sans réponse ou refusée, <strong>30 jours</strong> après un retrait. Une amitié vivante est conservée tant qu'elle dure.</p>
+      <p>L'ordre de votre liste et ce que votre écran en affiche restent, eux, dans votre sauvegarde.</p>
       <p><strong>La présence, en revanche, est publique</strong> au même titre que le reste de votre fiche d'annuaire (§ 1.3). Concrètement : une seule valeur, l'heure de votre dernier passage sur l'écran du défi. Elle est écrasée à chaque mise à jour — nous ne gardons aucun historique de vos horaires de jeu — et elle disparaît avec votre fiche d'annuaire. « En ligne » signifie donc « cette personne est sur l'écran du défi en ce moment », et rien de plus : le jeu ne dit jamais si votre téléphone est allumé ni ce que vous faites ailleurs.</p>
       <p><strong>C'est votre code d'ami qui décide.</strong> Le donner à quelqu'un, c'est accepter qu'il vous voie en ligne et vous défie. Ne le publiez pas si vous ne le souhaitez pas.</p>
 
@@ -400,6 +403,7 @@ footer{
             <tr><td>Identifiant anonyme, sauvegarde</td><td>fournir le jeu, ne pas perdre votre partie</td><td>exécution du contrat</td></tr>
             <tr><td>E-mail du compte lié</td><td>retrouver votre école sur un autre appareil</td><td>exécution du contrat</td></tr>
             <tr><td>Annuaire public des écoles</td><td>permettre le mode Classé et les défis</td><td>exécution du contrat</td></tr>
+            <tr><td>Demandes et amitiés</td><td>permettre les défis entre amis, et rendre un retrait réciproque</td><td>exécution du contrat</td></tr>
             <tr><td>Indicateur de présence</td><td>savoir si un ami peut jouer un défi maintenant</td><td>exécution du contrat</td></tr>
             <tr><td>Mesures d'usage</td><td>corriger les défauts, régler l'équilibrage</td><td>intérêt légitime</td></tr>
             <tr><td>Achats</td><td>vous livrer ce que vous avez payé, obligations comptables</td><td>contrat, obligation légale</td></tr>
@@ -430,6 +434,7 @@ footer{
           </thead>
           <tbody>
             <tr><td>Sauvegarde et compte</td><td>24 mois</td><td>après votre dernière connexion. Passé ce délai, la sauvegarde, la fiche d'annuaire et les duels sont supprimés.</td></tr>
+            <tr><td>Demandes d'ami</td><td>7 à 30 jours</td><td>7 jours sans réponse ou après un refus, 30 jours après un retrait. Une amitié vivante est conservée tant qu'elle dure, puis suit le sort de votre compte.</td></tr>
             <tr><td>Mesures d'usage</td><td>14 mois</td><td>—</td></tr>
             <tr><td>Justificatifs d'achat</td><td>10 ans</td><td>durée imposée par les obligations comptables françaises. Ils ne contiennent aucune coordonnée bancaire.</td></tr>
           </tbody>
@@ -443,7 +448,7 @@ footer{
 
       <h3>Supprimer votre compte et vos données</h3>
       <p>Depuis le jeu : <strong>Paramètres → Compte → Supprimer mon compte</strong>. La suppression est immédiate.</p>
-      <p>Ou par écrit à <a href="mailto:gloria.dev.app@gmail.com">gloria.dev.app@gmail.com</a>, depuis l'adresse liée à votre compte, ou en indiquant votre <strong>code d'ami</strong> si votre compte est anonyme. Nous supprimons alors sous 30 jours votre sauvegarde, votre fiche d'annuaire, vos duels et vos mesures d'usage.</p>
+      <p>Ou par écrit à <a href="mailto:gloria.dev.app@gmail.com">gloria.dev.app@gmail.com</a>, depuis l'adresse liée à votre compte, ou en indiquant votre <strong>code d'ami</strong> si votre compte est anonyme. Nous supprimons alors sous 30 jours votre sauvegarde, votre fiche d'annuaire et vos mesures d'usage. Vos <strong>duels</strong> et vos <strong>amitiés</strong> appartiennent à deux joueurs : les effacer priverait l'autre de son propre historique. Ils expirent d'eux-mêmes, aux durées indiquées au § 4.</p>
 
       <div class="note warn">
         <span class="tag">Irréversible</span>
@@ -486,7 +491,7 @@ footer{
   </article>
 
   <footer>
-    GLORIA — <code>com.lbalass.gloria</code> · Politique de confidentialité du 29 août 2026.
+    GLORIA — <code>com.lbalass.gloria</code> · Politique de confidentialité du 30 août 2026.
   </footer>
 
 </div>
