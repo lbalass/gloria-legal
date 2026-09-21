@@ -311,7 +311,7 @@ footer{
     <ul class="meta">
       <li>Application <b>com.lbalass.gloria</b></li>
       <li>Éditeur <b>Ludovic Balasso</b></li>
-      <li>Dernière mise à jour <b>1er septembre 2026</b></li>
+      <li>Dernière mise à jour <b>21 septembre 2026</b></li>
     </ul>
   </header>
 
@@ -339,7 +339,7 @@ footer{
 
       <div class="note">
         <span class="tag">En résumé</span>
-        <p>Lanistara est un jeu <strong>en ligne obligatoire</strong>. Vous n'avez pas besoin de créer de compte pour jouer : à la première ouverture, un <strong>compte anonyme</strong> est créé automatiquement. Vous pouvez ensuite le lier à un compte Google pour retrouver votre école sur un autre appareil.</p>
+        <p>Lanistara se joue <strong>aussi hors ligne</strong> ; le mode Classé, les tournois, les défis entre amis, la boutique et les publicités demandent une connexion. Vous n'avez pas besoin de créer de compte pour jouer : à la première ouverture, un <strong>compte anonyme</strong> est créé automatiquement. Vous pouvez ensuite le lier à un compte Google ou à une adresse e-mail pour retrouver votre école sur un autre appareil.</p>
         <p>Nous ne vendons aucune donnée. Nous ne demandons ni votre nom, ni votre adresse, ni votre téléphone, ni votre date de naissance.</p>
       </div>
     </section>
@@ -349,7 +349,7 @@ footer{
 
       <h3><span class="sub">1.1</span>Identifiant de compte</h3>
       <p>À la première ouverture, Firebase Authentication crée un <strong>identifiant anonyme</strong> — une suite de caractères sans rapport avec votre identité. C'est ce qui rattache votre école à vous.</p>
-      <p>Si vous <strong>liez un compte Google</strong> (facultatif, depuis Paramètres → Compte), nous conservons en plus <strong>l'adresse e-mail</strong> de ce compte. Elle sert uniquement à retrouver votre école quand vous changez d'appareil ; elle n'est jamais affichée aux autres joueurs, jamais utilisée pour vous écrire à des fins commerciales, et jamais transmise à un tiers.</p>
+      <p>Si vous <strong>liez un compte Google ou une adresse e-mail</strong> (facultatif, depuis Paramètres → Compte), nous conservons en plus <strong>cette adresse e-mail</strong>. Elle sert uniquement à retrouver votre école quand vous changez d'appareil ; elle n'est jamais affichée aux autres joueurs, jamais utilisée pour vous écrire à des fins commerciales, et jamais transmise à un tiers.</p>
 
       <h3><span class="sub">1.2</span>Votre partie</h3>
       <p>Votre progression est sauvegardée en ligne pour ne pas être perdue : gladiateurs, niveaux, équipement, monnaies, avancement de campagne, missions, passe de saison, réglages.</p>
@@ -378,6 +378,9 @@ footer{
       <p>L'ordre de votre liste et ce que votre écran en affiche restent, eux, dans votre sauvegarde.</p>
       <p><strong>La présence, en revanche, est publique</strong> au même titre que le reste de votre fiche d'annuaire (§ 1.3). Concrètement : une seule valeur, l'heure de votre dernier passage sur l'écran du défi. Elle est écrasée à chaque mise à jour — nous ne gardons aucun historique de vos horaires de jeu — et elle disparaît avec votre fiche d'annuaire. « En ligne » signifie donc « cette personne est sur l'écran du défi en ce moment », et rien de plus : le jeu ne dit jamais si votre téléphone est allumé ni ce que vous faites ailleurs.</p>
       <p><strong>C'est votre code d'ami qui décide.</strong> Le donner à quelqu'un, c'est accepter qu'il vous voie en ligne et vous défie. Ne le publiez pas si vous ne le souhaitez pas.</p>
+
+      <h3><span class="sub">1.4 bis</span>Tournois</h3>
+      <p>Quand vous inscrivez une équipe à un tournoi, une <strong>inscription</strong> est publiée : votre identifiant de compte, le <strong>nom et l'emblème de votre école</strong> et l'<strong>instantané de l'équipe inscrite</strong> (noms, classes, niveaux, statistiques, équipement de vos gladiateurs). Elle est <strong>lisible par tout joueur connecté</strong>, car chaque téléphone reconstruit le même tableau de tournoi à partir des inscriptions. Elle peut aussi servir à compléter le tableau des tournois des heures suivantes. Elle s'efface d'elle-même <strong>48 heures</strong> après l'heure du tournoi.</p>
 
       <h3><span class="sub">1.5</span>Mesures d'usage</h3>
       <p>Nous enregistrons des <strong>événements de jeu anonymes</strong> pour comprendre ce qui fonctionne et corriger ce qui coince : première ouverture, étapes du tutoriel, fin de combat, coffre ouvert, énergie épuisée, achat, publicité regardée, ouverture de la passe de saison, plantage.</p>
@@ -434,6 +437,7 @@ footer{
           </thead>
           <tbody>
             <tr><td>Sauvegarde et compte</td><td>24 mois</td><td>après votre dernière connexion. Passé ce délai, la sauvegarde, la fiche d'annuaire et les duels sont supprimés.</td></tr>
+            <tr><td>Inscriptions de tournoi</td><td>48 heures</td><td>après l'heure du tournoi.</td></tr>
             <tr><td>Demandes d'ami</td><td>7 à 30 jours</td><td>7 jours sans réponse ou après un refus, 30 jours après un retrait. Une amitié vivante est conservée tant qu'elle dure, puis suit le sort de votre compte.</td></tr>
             <tr><td>Mesures d'usage</td><td>14 mois</td><td>—</td></tr>
             <tr><td>Justificatifs d'achat</td><td>10 ans</td><td>durée imposée par les obligations comptables françaises. Ils ne contiennent aucune coordonnée bancaire.</td></tr>
@@ -447,7 +451,7 @@ footer{
       <p>Vous pouvez à tout moment demander l'<strong>accès</strong> à vos données, leur <strong>rectification</strong>, leur <strong>suppression</strong>, leur <strong>portabilité</strong>, ou vous <strong>opposer</strong> à leur traitement.</p>
 
       <h3>Supprimer votre compte et vos données</h3>
-      <p>Depuis le jeu : <strong>Paramètres → Compte → Supprimer mon compte</strong>. La suppression est immédiate.</p>
+      <p>Depuis le jeu : <strong>Paramètres → Compte → Supprimer mon compte</strong>. La suppression est immédiate pour votre sauvegarde, votre fiche d'annuaire, vos mesures d'usage, vos amitiés et vos inscriptions aux tournois à venir. Vos inscriptions aux tournois déjà joués s'effacent sous 48 heures (les tableaux des autres joueurs en dépendent). Si votre compte est lié à une adresse e-mail et que Google exige une connexion récente pour le supprimer, le jeu vous demande de vous reconnecter puis de recommencer : l'adresse est alors effacée à son tour.</p>
       <p>Ou par écrit à <a href="mailto:gloria.dev.app@gmail.com">gloria.dev.app@gmail.com</a>, depuis l'adresse liée à votre compte, ou en indiquant votre <strong>code d'ami</strong> si votre compte est anonyme. Nous supprimons alors sous 30 jours votre sauvegarde, votre fiche d'annuaire et vos mesures d'usage. Vos <strong>duels</strong> et vos <strong>amitiés</strong> appartiennent à deux joueurs : les effacer priverait l'autre de son propre historique. Ils expirent d'eux-mêmes, aux durées indiquées au § 4.</p>
 
       <div class="note warn">
