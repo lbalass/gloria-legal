@@ -297,6 +297,10 @@ footer{
   nav.toc a:hover{color:var(--ink)}
 }
 
+/* ---------- les trois documents, liés entre eux (04/10) ---------- */
+footer .docs{margin:0 0 8px;font-size:14.5px}
+footer .docs a[aria-current]{color:var(--ink);text-decoration:none;font-weight:700}
+
 @media (prefers-reduced-motion:reduce){
   *{transition:none!important;animation:none!important;scroll-behavior:auto!important}
 }
@@ -310,8 +314,8 @@ footer{
     <h1>Lanistara</h1>
     <ul class="meta">
       <li>Application <b>com.lbalass.gloria</b></li>
-      <li>Éditeur <b>Ludovic Balasso</b></li>
-      <li>Dernière mise à jour <b>21 septembre 2026</b></li>
+      <li>Éditeur <b>Atrixa — Ludovic Balasso, EI</b></li>
+      <li>Dernière mise à jour <b>4 octobre 2026</b></li>
     </ul>
   </header>
 
@@ -334,7 +338,7 @@ footer{
 
     <section>
       <h2>Qui est responsable de vos données</h2>
-      <p>L'application <strong>Lanistara</strong> — anciennement GLORIA — (<code>com.lbalass.gloria</code>) est éditée par <strong>Ludovic Balasso</strong>, 1110 route du Charbinat, 38510 Arandon-Passins, France, ci-après « nous ».</p>
+      <p>L'application <strong>Lanistara</strong> — anciennement GLORIA — (<code>com.lbalass.gloria</code>) est éditée par <strong>Ludovic Balasso</strong>, entrepreneur individuel (EI) sous le nom commercial <strong>Atrixa</strong> (SIRET 104 576 483 00010), 1110 route du Charbinat, 38510 Arandon-Passins, France, ci-après « nous ». Les autres informations légales figurent dans les <a href="mentions-legales.html">mentions légales</a>.</p>
       <p>Pour toute question ou demande concernant vos données : <a href="mailto:gloria.dev.app@gmail.com">gloria.dev.app@gmail.com</a>. Nous répondons sous 30 jours.</p>
 
       <div class="note">
@@ -484,7 +488,7 @@ footer{
       <h2><span class="num">9.</span>Contact</h2>
       <div class="contact">
         <address>
-          <span class="name">Ludovic Balasso</span><br>
+          <span class="name">Ludovic Balasso</span> — Atrixa (EI)<br>
           1110 route du Charbinat<br>
           38510 Arandon-Passins, France<br>
           <a href="mailto:gloria.dev.app@gmail.com">gloria.dev.app@gmail.com</a>
@@ -495,7 +499,8 @@ footer{
   </article>
 
   <footer>
-    Lanistara — <code>com.lbalass.gloria</code> · Politique de confidentialité du 1er septembre 2026.
+    <p class="docs"><a href="index.html" aria-current="page">Politique de confidentialité</a> · <a href="conditions.html">Conditions générales</a> · <a href="mentions-legales.html">Mentions légales</a></p>
+    Lanistara — <code>com.lbalass.gloria</code> · Politique de confidentialité du 4 octobre 2026.
   </footer>
 
 </div>

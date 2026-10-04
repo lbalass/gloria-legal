@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Conditions générales d'utilisation et de vente de Lanistara, jeu mobile de gestion d'école de gladiateurs : gemmes, passe de saison, rétractation, garantie, médiation.">
+<meta name="robots" content="index, follow">
+<title>Conditions Lanistara</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap">
+
+<style>
+:root{
+  --ground:#EDEEEA;
+  --surface:#F8F9F6;
+  --ink:#1E231F;
+  --muted:#5C6259;
+  --accent:#3A6B5C;
+  --accent-soft:#E2EAE5;
+  --warn:#8C3A2E;
+  --warn-soft:#F4E7E4;
+  --rule:#D6D9D1;
+  --shadow:0 1px 2px rgba(30,35,31,.05);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#141815;
+    --surface:#1B211D;
+    --ink:#E3E7E0;
+    --muted:#99A196;
+    --accent:#77B29D;
+    --accent-soft:#1E2C27;
+    --warn:#DE9C8E;
+    --warn-soft:#2C201D;
+    --rule:#2B332D;
+    --shadow:none;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#141815;
+  --surface:#1B211D;
+  --ink:#E3E7E0;
+  --muted:#99A196;
+  --accent:#77B29D;
+  --accent-soft:#1E2C27;
+  --warn:#DE9C8E;
+  --warn-soft:#2C201D;
+  --rule:#2B332D;
+  --shadow:none;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  background:var(--ground);
+  color:var(--ink);
+  font-family:"Alegreya Sans","Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:17px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+
+.wrap{
+  max-width:1160px;
+  margin:0 auto;
+  padding:0 28px 96px;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:0 56px;
+}
+
+/* ---------- masthead ---------- */
+.masthead{
+  grid-column:1/-1;
+  border-bottom:1px solid var(--rule);
+  padding:56px 0 28px;
+  margin-bottom:44px;
+}
+.eyebrow{
+  font-size:12px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--accent);
+  font-weight:700;
+  margin:0 0 14px;
+}
+h1{
+  font-family:Cinzel,Georgia,"Times New Roman",serif;
+  font-weight:600;
+  font-size:clamp(30px,5vw,44px);
+  line-height:1.14;
+  letter-spacing:.01em;
+  margin:0 0 20px;
+  text-wrap:balance;
+}
+.meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px 26px;
+  font-size:14.5px;
+  color:var(--muted);
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+.meta b{color:var(--ink);font-weight:500}
+
+/* ---------- table of contents ---------- */
+nav.toc{display:none}
+
+/* ---------- article ---------- */
+article{min-width:0;max-width:68ch}
+
+section{
+  padding-bottom:40px;
+  margin-bottom:40px;
+  border-bottom:1px solid var(--rule);
+}
+section:last-of-type{border-bottom:0}
+
+h2{
+  font-family:Cinzel,Georgia,serif;
+  font-weight:600;
+  font-size:23px;
+  line-height:1.24;
+  letter-spacing:.005em;
+  margin:0 0 18px;
+  text-wrap:balance;
+  scroll-margin-top:24px;
+}
+h2 .num{
+  color:var(--accent);
+  font-variant-numeric:tabular-nums;
+  margin-right:.5em;
+}
+h3{
+  font-family:"Alegreya Sans",sans-serif;
+  font-weight:700;
+  font-size:17.5px;
+  letter-spacing:.01em;
+  margin:30px 0 10px;
+  color:var(--ink);
+}
+h3 .sub{
+  color:var(--muted);
+  font-weight:500;
+  font-variant-numeric:tabular-nums;
+  margin-right:.45em;
+}
+
+p{margin:0 0 15px}
+p:last-child{margin-bottom:0}
+strong{font-weight:700}
+em{font-style:italic;color:var(--muted)}
+
+ul{margin:0 0 15px;padding-left:0;list-style:none}
+ul li{
+  position:relative;
+  padding-left:20px;
+  margin-bottom:7px;
+}
+ul li::before{
+  content:"";
+  position:absolute;
+  left:2px;top:.72em;
+  width:5px;height:5px;
+  background:var(--accent);
+  transform:rotate(45deg);
+}
+
+a{color:var(--accent);text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:1px}
+
+code{
+  font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  font-size:.88em;
+  background:var(--accent-soft);
+  color:var(--ink);
+  padding:.1em .38em;
+  border-radius:2px;
+}
+
+/* ---------- asides : les deux paragraphes qui peuvent surprendre ---------- */
+.note{
+  background:var(--surface);
+  border:1px solid var(--rule);
+  border-left:3px solid var(--accent);
+  border-radius:2px;
+  padding:18px 20px;
+  margin:20px 0;
+  box-shadow:var(--shadow);
+}
+.note.warn{border-left-color:var(--warn);background:var(--warn-soft)}
+.note.warn strong{color:var(--warn)}
+.note p:last-child{margin-bottom:0}
+.note .tag{
+  display:block;
+  font-size:11.5px;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  font-weight:700;
+  color:var(--accent);
+  margin-bottom:9px;
+}
+.note.warn .tag{color:var(--warn)}
+
+/* ---------- tables ---------- */
+.tablewrap{overflow-x:auto;margin:20px 0;-webkit-overflow-scrolling:touch}
+table{
+  border-collapse:collapse;
+  width:100%;
+  min-width:520px;
+  font-size:15.5px;
+  font-variant-numeric:tabular-nums;
+}
+th,td{
+  text-align:left;
+  padding:10px 14px 10px 0;
+  border-bottom:1px solid var(--rule);
+  vertical-align:top;
+}
+th{
+  font-size:11.5px;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  color:var(--muted);
+  font-weight:700;
+  border-bottom-color:var(--ink);
+  padding-bottom:8px;
+}
+tbody tr:last-child td{border-bottom:0}
+td:first-child{color:var(--ink);font-weight:500;padding-right:22px}
+td:not(:first-child){color:var(--muted)}
+
+/* ---------- contact ---------- */
+.contact{
+  background:var(--surface);
+  border:1px solid var(--rule);
+  border-radius:2px;
+  padding:24px 26px;
+  box-shadow:var(--shadow);
+}
+.contact address{font-style:normal;line-height:1.75}
+.contact .name{font-weight:700}
+
+footer{
+  grid-column:1/-1;
+  border-top:1px solid var(--rule);
+  margin-top:8px;
+  padding-top:22px;
+  font-size:13.5px;
+  color:var(--muted);
+}
+
+/* ---------- large screens : sommaire collant ---------- */
+@media (min-width:1000px){
+  .wrap{grid-template-columns:216px minmax(0,1fr)}
+  nav.toc{
+    display:block;
+    align-self:start;
+    position:sticky;
+    top:32px;
+    padding-top:4px;
+  }
+  nav.toc .tag{
+    font-size:11.5px;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--muted);
+    margin:0 0 14px;
+  }
+  nav.toc ol{
+    list-style:none;
+    margin:0;padding:0;
+    counter-reset:toc;
+    font-size:14.5px;
+    line-height:1.42;
+  }
+  nav.toc li{margin-bottom:11px}
+  nav.toc a{
+    color:var(--muted);
+    text-decoration:none;
+    display:flex;
+    gap:9px;
+  }
+  nav.toc a::before{
+    counter-increment:toc;
+    content:counter(toc);
+    color:var(--accent);
+    font-variant-numeric:tabular-nums;
+    min-width:14px;
+  }
+  nav.toc a:hover{color:var(--ink)}
+}
+
+/* ---------- les trois documents, liés entre eux (04/10) ---------- */
+footer .docs{margin:0 0 8px;font-size:14.5px}
+footer .docs a[aria-current]{color:var(--ink);text-decoration:none;font-weight:700}
+
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="eyebrow">Conditions générales d'utilisation et de vente</p>
+    <h1>Lanistara</h1>
+    <ul class="meta">
+      <li>Application <b>com.lbalass.gloria</b></li>
+      <li>Éditeur <b>Atrixa — Ludovic Balasso, EI</b></li>
+      <li>En vigueur le <b>4 octobre 2026</b></li>
+    </ul>
+  </header>
+
+  <nav class="toc" aria-label="Sommaire">
+    <p class="tag">Sommaire</p>
+    <ol>
+      <li><a href="#s1">L'éditeur</a></li>
+      <li><a href="#s2">Le jeu</a></li>
+      <li><a href="#s3">Règles de bonne conduite</a></li>
+      <li><a href="#s4">Les contenus payants</a></li>
+      <li><a href="#s5">Prix et paiement</a></li>
+      <li><a href="#s6">Commande et livraison</a></li>
+      <li><a href="#s7">Droit de rétractation</a></li>
+      <li><a href="#s8">Garantie légale de conformité</a></li>
+      <li><a href="#s9">Évolution et disponibilité du jeu</a></li>
+      <li><a href="#s10">Responsabilité</a></li>
+      <li><a href="#s11">Propriété intellectuelle</a></li>
+      <li><a href="#s12">Données personnelles</a></li>
+      <li><a href="#s13">Réclamations et médiation</a></li>
+      <li><a href="#s14">Droit applicable</a></li>
+      <li><a href="#s15">Modification des conditions</a></li>
+    </ol>
+  </nav>
+
+  <article>
+
+    <section>
+      <h2>À quoi servent ces conditions</h2>
+      <p>Elles encadrent l'utilisation du jeu mobile <strong>Lanistara</strong> (<code>com.lbalass.gloria</code>) et les achats de contenus numériques que vous y faites. Elles se lisent à tout moment dans le jeu (Paramètres → Mentions légales → Conditions générales) et sur cette page.</p>
+      <p>Vous les acceptez en utilisant le jeu. Chaque achat est en outre <strong>confirmé expressément</strong> dans le jeu, avant le paiement.</p>
+
+      <div class="note">
+        <span class="tag">En résumé</span>
+        <p>Le jeu est gratuit. Les gemmes et la passe de saison sont payantes et <strong>livrées tout de suite</strong> : avant chaque achat, vous demandez cette livraison immédiate et reconnaissez perdre votre droit de rétractation. La <strong>garantie légale de conformité</strong> s'applique toujours.</p>
+        <p>Un litige ? Écrivez-nous d'abord ; si nous ne le réglons pas, vous pouvez saisir <strong>gratuitement</strong> le médiateur de la consommation, le CM2C (§ 13).</p>
+      </div>
+    </section>
+
+    <section id="s1">
+      <h2><span class="num">1.</span>L'éditeur</h2>
+      <div class="contact">
+        <address>
+          <span class="name">Ludovic Balasso</span>, entrepreneur individuel (EI), nom commercial <strong>Atrixa</strong><br>
+          1110 route du Charbinat, 38510 Arandon-Passins, France<br>
+          SIRET 104 576 483 00010 · APE 62.01Z<br>
+          TVA non applicable, article 293 B du CGI<br>
+          <a href="mailto:contact@atrixa.fr">contact@atrixa.fr</a> · support du jeu : <a href="mailto:gloria.dev.app@gmail.com">gloria.dev.app@gmail.com</a>
+        </address>
+      </div>
+      <p style="margin-top:15px">Ci-après « l'éditeur » ou « nous ». Les autres informations légales figurent dans les <a href="mentions-legales.html">mentions légales</a>.</p>
+    </section>
+
+    <section id="s2">
+      <h2><span class="num">2.</span>Le jeu</h2>
+      <ul>
+        <li>Lanistara est un jeu de gestion d'école de gladiateurs pour Android, <strong>téléchargeable et jouable gratuitement</strong> depuis Google Play, en français et en anglais.</li>
+        <li>Il se joue aussi hors ligne. Le mode Classé, les tournois, les défis entre amis, la boutique et les publicités demandent une connexion à Internet, à votre charge.</li>
+        <li>Il est destiné aux joueurs de <strong>16 ans et plus</strong> (voir la <a href="index.html">politique de confidentialité</a>, § 6). Un joueur mineur doit obtenir l'accord d'un parent avant tout achat.</li>
+        <li>Un compte anonyme est créé à la première ouverture. Vous pouvez le lier à un compte Google ou à une adresse e-mail pour retrouver votre école sur un autre appareil, et le supprimer à tout moment (Paramètres → Compte).</li>
+      </ul>
+    </section>
+
+    <section id="s3">
+      <h2><span class="num">3.</span>Règles de bonne conduite</h2>
+      <ul>
+        <li>Le nom de votre école et celui de vos gladiateurs sont visibles des autres joueurs : ils ne doivent être ni injurieux, ni haineux, ni porter atteinte aux droits d'autrui.</li>
+        <li>Il est interdit de tricher : modifier le jeu ou sa sauvegarde, exploiter volontairement un défaut, automatiser des parties ou publier une équipe falsifiée.</li>
+        <li>En cas de manquement, nous pouvons retirer un nom ou une équipe des classements, ou suspendre l'accès aux fonctions en ligne, en vous prévenant lorsque c'est possible. Vous pouvez contester cette décision en nous écrivant (§ 13).</li>
+      </ul>
+    </section>
+
+    <section id="s4">
+      <h2><span class="num">4.</span>Les contenus payants</h2>
+      <h3><span class="sub">4.1</span>Les gemmes</h3>
+      <p>Les gemmes sont la monnaie virtuelle du jeu, vendue par paquets. Elles servent à obtenir des services et des objets du jeu : énergie, accélérations, coffres, lots, relances.</p>
+      <p>Elles n'ont aucune valeur monétaire hors du jeu : elles ne s'échangent pas contre de l'argent, ne se revendent pas et ne se transfèrent pas à un autre compte. Elles restent attachées à votre école tant que votre compte existe ; la suppression du compte les supprime. Ces règles ne limitent pas vos droits légaux (§ 8).</p>
+      <h3><span class="sub">4.2</span>La passe de saison</h3>
+      <p>Une saison dure un mois calendaire et se termine le 1<sup>er</sup> du mois suivant à 0 h 00 (temps universel). La passe ouvre la <strong>voie impériale</strong> de la saison en cours : trente paliers de récompenses, en plus de la voie gratuite. Son contenu entier est visible avant l'achat.</p>
+      <p>L'achat vaut pour la saison en cours seulement. Les paliers déjà franchis deviennent aussitôt réclamables, les suivants au fil du jeu. À la fin de la saison, tout ce qui a été gagné et non réclamé est versé automatiquement.</p>
+      <h3><span class="sub">4.3</span>Les publicités</h3>
+      <p>Les publicités récompensées sont facultatives et gratuites : vous choisissez d'en regarder une pour recevoir un bonus, dans la limite d'un nombre quotidien affiché dans le jeu.</p>
+    </section>
+
+    <section id="s5">
+      <h2><span class="num">5.</span>Prix et paiement</h2>
+      <p>Le prix est affiché dans le jeu, sur le bouton d'achat, puis sur la feuille de paiement de Google Play, dans votre devise et <strong>toutes taxes comprises</strong>, avant toute validation. Le prix payé est celui que Google Play affiche au moment où vous validez.</p>
+      <p>Le paiement se fait <strong>uniquement par Google Play</strong>, avec les moyens de paiement de votre compte Google. Nous ne recevons jamais vos coordonnées bancaires. Google Play perçoit et reverse la TVA applicable dans votre pays.</p>
+    </section>
+
+    <section id="s6">
+      <h2><span class="num">6.</span>Commande et livraison</h2>
+      <ol style="padding-left:20px;margin:0 0 15px">
+        <li>Vous touchez le prix d'un paquet de gemmes ou de la passe.</li>
+        <li>Le jeu affiche un récapitulatif — le contenu, son prix — et vous demande de <strong>confirmer</strong> : vous demandez la livraison immédiate du contenu et reconnaissez perdre votre droit de rétractation (§ 7). « Annuler » n'engage à rien.</li>
+        <li>La feuille de paiement de Google Play s'ouvre. Votre validation sur cette feuille passe la commande, avec obligation de paiement.</li>
+      </ol>
+      <p>Le contenu est livré <strong>dès que Google Play confirme le paiement</strong>. Si la livraison est interrompue (réseau coupé, jeu fermé), l'achat payé est livré automatiquement à la connexion suivante à Google Play. Google Play vous envoie un reçu par e-mail pour chaque achat.</p>
+    </section>
+
+    <section id="s7">
+      <h2><span class="num">7.</span>Droit de rétractation</h2>
+      <p>Pour un achat à distance, la loi vous donne en principe quatorze jours pour vous rétracter (article L221-18 du Code de la consommation). Ce droit <strong>ne peut pas être exercé</strong> pour un contenu numérique fourni sans support matériel, dont la livraison commence avec votre accord préalable exprès et pour lequel vous avez reconnu perdre ce droit (article L221-28, 13°) : c'est l'objet de la confirmation de l'étape 2.</p>
+      <p>Indépendamment de ce qui précède, Google Play peut, selon ses propres règles, rembourser un achat récent (demande depuis <a href="https://play.google.com">play.google.com</a>). Ces règles sont celles de Google ; elles ne remplacent pas vos droits légaux.</p>
+    </section>
+
+    <section id="s8">
+      <h2><span class="num">8.</span>Garantie légale de conformité</h2>
+      <p>Nous devons vous fournir un contenu numérique conforme au contrat. Nous répondons des défauts de conformité qui existent au moment de la fourniture et apparaissent dans un délai de <strong>deux ans</strong> à compter de celle-ci (articles L224-25-12 et suivants du Code de la consommation).</p>
+      <p>En cas de défaut — gemmes non créditées, passe non ouverte, contenu qui ne fonctionne pas — vous avez droit à la mise en conformité, sans frais et dans un délai raisonnable. Si elle est impossible ou n'intervient pas, vous pouvez obtenir une réduction du prix ou la résolution du contrat, avec remboursement.</p>
+      <p>Pour la faire jouer, écrivez à <a href="mailto:contact@atrixa.fr">contact@atrixa.fr</a> en indiquant le nom de votre école, le contenu acheté, sa date et, si possible, le reçu de Google Play.</p>
+    </section>
+
+    <section id="s9">
+      <h2><span class="num">9.</span>Évolution et disponibilité du jeu</h2>
+      <ul>
+        <li>Le jeu évolue : mises à jour, nouveaux contenus, équilibrage. Nous pouvons modifier le contenu du jeu et le prix en gemmes de ce qu'il propose, sans toucher aux contenus déjà livrés.</li>
+        <li>Une mise à jour peut être exigée pour continuer à jouer.</li>
+        <li>Les services en ligne peuvent être interrompus pour maintenance ou du fait de nos prestataires. Nous faisons le nécessaire pour les rétablir au plus vite.</li>
+        <li>Si nous devions arrêter les services en ligne du jeu, nous l'annoncerions dans le jeu au moins trente jours à l'avance, et la vente de gemmes cesserait dès l'annonce.</li>
+      </ul>
+    </section>
+
+    <section id="s10">
+      <h2><span class="num">10.</span>Responsabilité</h2>
+      <p>Nous sommes responsables de la bonne exécution de nos obligations, dans les conditions prévues par la loi. Nous ne le sommes pas d'un dommage causé par une utilisation contraire à ces conditions, par un appareil ou une connexion défaillants, par le fait d'un tiers ou par un cas de force majeure.</p>
+      <p>Rien dans ces conditions ne limite les droits que la loi garantit au consommateur.</p>
+    </section>
+
+    <section id="s11">
+      <h2><span class="num">11.</span>Propriété intellectuelle</h2>
+      <p>Le jeu — son code, ses textes, ses illustrations, ses modèles 3D, ses sons et le nom Lanistara — appartient à l'éditeur ou est utilisé sous licence. Les polices Cinzel, Alegreya et Noto Emoji sont distribuées sous licence SIL Open Font License ; les illustrations et objets 3D ont été générés avec Meshy AI.</p>
+      <p>Vous recevez un droit personnel, non exclusif et non transférable d'utiliser le jeu pour votre usage privé. Toute reproduction, extraction ou décompilation est interdite, sauf dans les cas où la loi l'autorise.</p>
+    </section>
+
+    <section id="s12">
+      <h2><span class="num">12.</span>Données personnelles</h2>
+      <p>Les données traitées, leurs finalités, leurs destinataires, leurs durées de conservation et vos droits sont décrits dans la <a href="index.html">politique de confidentialité</a>.</p>
+    </section>
+
+    <section id="s13">
+      <h2><span class="num">13.</span>Réclamations et médiation</h2>
+      <p>Pour toute réclamation, écrivez-nous à <a href="mailto:contact@atrixa.fr">contact@atrixa.fr</a> ou par courrier à l'adresse du § 1. Nous vous répondons sous 30 jours.</p>
+      <p>Si votre réclamation écrite n'aboutit pas, vous pouvez recourir <strong>gratuitement</strong> au médiateur de la consommation dont nous relevons (articles L612-1 et suivants du Code de la consommation), dans l'année qui suit votre réclamation :</p>
+      <div class="contact">
+        <address>
+          <span class="name">CM2C</span> — Centre de la Médiation de la Consommation de Conciliateurs de Justice<br>
+          49 rue de Ponthieu, 75008 Paris<br>
+          <a href="https://www.cm2c.net">www.cm2c.net</a> · <a href="mailto:contact@cm2c.net">contact@cm2c.net</a> · 01 89 47 00 14
+        </address>
+      </div>
+      <p style="margin-top:15px">La médiation est facultative : vous restez libre de saisir le juge.</p>
+    </section>
+
+    <section id="s14">
+      <h2><span class="num">14.</span>Droit applicable</h2>
+      <p>Ces conditions sont soumises au droit français. Si vous résidez dans un autre pays de l'Union européenne, vous gardez la protection des règles impératives de la loi de votre pays.</p>
+      <p>En cas de litige, vous pouvez saisir la juridiction compétente selon le Code de procédure civile ou celle du lieu où vous demeuriez lors de l'achat (article R631-3 du Code de la consommation).</p>
+    </section>
+
+    <section id="s15">
+      <h2><span class="num">15.</span>Modification des conditions</h2>
+      <p>Nous pouvons modifier ces conditions ; la date en haut de page indique la version en vigueur. Un achat reste régi par les conditions en vigueur à sa date. Un changement important est annoncé dans le jeu avant de prendre effet.</p>
+    </section>
+
+  </article>
+
+  <footer>
+    <p class="docs"><a href="index.html">Politique de confidentialité</a> · <a href="conditions.html" aria-current="page">Conditions générales</a> · <a href="mentions-legales.html">Mentions légales</a></p>
+    Lanistara — <code>com.lbalass.gloria</code> · Conditions générales d'utilisation et de vente du 4 octobre 2026.
+  </footer>
+
+</div>
+</body>
+</html>
