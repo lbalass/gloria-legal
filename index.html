@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Politique de confidentialité de Lanistara (anciennement GLORIA), jeu mobile de gestion d'école de gladiateurs.">
+<meta name="description" content="Politique de confidentialité de Lanistara (anciennement GLORIA), jeu de gladiateurs pour Android : compte, partie, publicités AdMob, achats Google Play.">
 <meta name="robots" content="index, follow">
 <title>Confidentialité Lanistara</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -297,7 +297,7 @@ footer{
   nav.toc a:hover{color:var(--ink)}
 }
 
-/* ---------- les trois documents, liés entre eux (04/10) ---------- */
+/* ---------- les quatre documents, liés entre eux ---------- */
 footer .docs{margin:0 0 8px;font-size:14.5px}
 footer .docs a[aria-current]{color:var(--ink);text-decoration:none;font-weight:700}
 
@@ -315,7 +315,7 @@ footer .docs a[aria-current]{color:var(--ink);text-decoration:none;font-weight:7
     <ul class="meta">
       <li>Application <b>com.lbalass.gloria</b></li>
       <li>Éditeur <b>Atrixa — Ludovic Balasso, EI</b></li>
-      <li>Dernière mise à jour <b>4 octobre 2026</b></li>
+      <li>Dernière mise à jour <b>13 novembre 2026</b></li>
     </ul>
   </header>
 
@@ -327,7 +327,7 @@ footer .docs a[aria-current]{color:var(--ink);text-decoration:none;font-weight:7
       <li><a href="#s3">À qui elles sont transmises</a></li>
       <li><a href="#s4">Combien de temps</a></li>
       <li><a href="#s5">Vos droits</a></li>
-      <li><a href="#s6">Enfants</a></li>
+      <li><a href="#s6">Mineurs</a></li>
       <li><a href="#s7">Sécurité</a></li>
       <li><a href="#s8">Modifications</a></li>
       <li><a href="#s9">Contact</a></li>
@@ -343,7 +343,8 @@ footer .docs a[aria-current]{color:var(--ink);text-decoration:none;font-weight:7
 
       <div class="note">
         <span class="tag">En résumé</span>
-        <p>Lanistara se joue <strong>aussi hors ligne</strong> ; le mode Classé, les tournois, les défis entre amis, la boutique et les publicités demandent une connexion. Vous n'avez pas besoin de créer de compte pour jouer : à la première ouverture, un <strong>compte anonyme</strong> est créé automatiquement. Vous pouvez ensuite le lier à un compte Google ou à une adresse e-mail pour retrouver votre école sur un autre appareil.</p>
+        <p>Vous n'avez pas besoin de créer de compte pour jouer : à la première ouverture, un <strong>compte invité</strong> est créé automatiquement. Vous pouvez le <strong>lier à votre compte Google</strong> pour retrouver votre partie sur un autre téléphone ; ce lien est obligatoire pour acheter dans le jeu.</p>
+        <p>Le jeu affiche des <strong>publicités récompensées</strong> de Google AdMob, toujours à votre initiative, et vend des gemmes et une passe de 30 jours par <strong>Google Play</strong>. Nous ne voyons jamais votre carte bancaire.</p>
         <p>Nous ne vendons aucune donnée. Nous ne demandons ni votre nom, ni votre adresse, ni votre téléphone, ni votre date de naissance.</p>
       </div>
     </section>
@@ -351,52 +352,53 @@ footer .docs a[aria-current]{color:var(--ink);text-decoration:none;font-weight:7
     <section id="s1">
       <h2><span class="num">1.</span>Les données que nous traitons</h2>
 
-      <h3><span class="sub">1.1</span>Identifiant de compte</h3>
-      <p>À la première ouverture, Firebase Authentication crée un <strong>identifiant anonyme</strong> — une suite de caractères sans rapport avec votre identité. C'est ce qui rattache votre école à vous.</p>
-      <p>Si vous <strong>liez un compte Google ou une adresse e-mail</strong> (facultatif, depuis Paramètres → Compte), nous conservons en plus <strong>cette adresse e-mail</strong>. Elle sert uniquement à retrouver votre école quand vous changez d'appareil ; elle n'est jamais affichée aux autres joueurs, jamais utilisée pour vous écrire à des fins commerciales, et jamais transmise à un tiers.</p>
+      <h3><span class="sub">1.1</span>Compte invité</h3>
+      <p>À la première ouverture, Firebase Authentication (un service de Google) crée un <strong>identifiant de compte</strong> — une suite de caractères sans rapport avec votre identité. Il rattache votre partie à vous. Il s'affiche dans <strong>Paramètres → Compte et mentions</strong> (« Identifiant du compte ») : c'est lui qu'il faut nous donner si vous nous écrivez au sujet de votre compte.</p>
+      <p>Votre partie est gardée sur notre serveur (§ 1.3). Mais tant que le compte n'est pas lié à Google, seul ce téléphone y donne accès : si vous désinstallez le jeu, vous ne pourrez plus retrouver votre partie.</p>
+      <p>Le téléphone garde aussi, pour le jeu seulement : la connexion à votre compte, vos réglages, et le combat en cours tant qu'il n'est pas envoyé au serveur. Ces données ne sont pas sauvegardées ailleurs : désinstaller le jeu les efface.</p>
 
-      <h3><span class="sub">1.2</span>Votre partie</h3>
-      <p>Votre progression est sauvegardée en ligne pour ne pas être perdue : gladiateurs, niveaux, équipement, monnaies, avancement de campagne, missions, passe de saison, réglages.</p>
+      <h3><span class="sub">1.2</span>Compte Google (facultatif)</h3>
+      <p>Depuis <strong>Paramètres → Compte et mentions</strong>, vous pouvez lier votre partie à un compte Google. Vous choisissez le compte dans la fenêtre de Google ; Google remet alors au jeu une <strong>preuve de connexion</strong> (un « jeton »), que le jeu transmet à Firebase Authentication pour lier le compte.</p>
+      <p>Firebase Authentication garde alors, avec votre identifiant de compte, <strong>l'identifiant de votre compte Google et son adresse e-mail</strong>, ainsi que les informations de profil que Google joint à ce jeton (selon votre compte Google, votre nom et votre photo de profil). Le jeu n'utilise que l'adresse e-mail, et seulement pour vous l'afficher sur votre téléphone (« Lié à Google : … »). Elle n'est jamais montrée aux autres joueurs, jamais utilisée pour vous écrire à des fins commerciales, et jamais transmise à un tiers.</p>
+      <p>Le lien avec Google est <strong>exigé pour acheter</strong> des gemmes ou la passe : sans lui, un achat serait perdu à la désinstallation.</p>
+      <p>Vous pouvez vous déconnecter de Google à tout moment : votre partie reste attachée à votre compte Google et ce téléphone repart en invité.</p>
 
-      <h3><span class="sub">1.3</span>Ce que les autres joueurs voient</h3>
-      <p>Le mode <strong>Classé</strong> oppose de vraies écoles. Pour que d'autres joueurs puissent vous affronter, un extrait de votre école est publié dans un annuaire <strong>lisible par tout joueur connecté au jeu</strong> :</p>
+      <h3><span class="sub">1.3</span>Votre partie</h3>
+      <p>Votre partie est gardée sur notre serveur : gladiateurs (et leurs noms), objets, ressources, or, gemmes, date de fin de votre passe, compteurs du jour (coffres ouverts, relèves par pub, gemmes changées en or), courses de la campagne et combats.</p>
+      <p>Les <strong>noms de vos gladiateurs</strong> sont réservés dans tout le jeu : deux gladiateurs ne peuvent pas porter le même nom. N'y mettez aucune donnée personnelle (ni votre nom réel, ni votre adresse e-mail).</p>
+      <p>Pour vérifier un combat, le serveur garde son enregistrement (vos actions pendant le combat) <strong>7 jours</strong>, puis l'efface.</p>
+      <p>Si la vérification d'un combat trouve une anomalie, le serveur la note dans un <strong>journal des anomalies</strong> (votre identifiant de compte, le gladiateur, le combat, ce qui ne va pas, la date). Ce journal sert à corriger le jeu et à repérer la triche ; il est gardé jusqu'à la suppression de votre compte.</p>
+
+      <h3><span class="sub">1.4</span>Hôtel des ventes</h3>
+      <p>Quand vous mettez un objet ou un lot en vente, l'annonce (l'objet, la quantité, le prix, les dates) est visible par les autres joueurs <strong>sans votre identifiant ni votre nom</strong>. Chaque vente est notée dans un journal (objet, quantité, prix, date, vendeur, acheteur) qui sert à l'historique des deux joueurs et à la lutte contre la fraude.</p>
+      <p>Pour la même raison, le serveur compte les ventes entre deux mêmes comptes sur les 7 derniers jours : ce suivi porte les identifiants des deux comptes et reste gardé jusqu'à la suppression de l'un d'eux.</p>
+      <p>Une vente qui paraît suspecte (prix très éloigné du prix habituel, ventes répétées entre deux mêmes comptes) est notée à part (vendeur, acheteur, objet, prix, raisons, date) : l'acheteur reçoit son achat, mais l'or du vendeur est <strong>mis en attente 72 heures</strong> avant d'être versé ; le jeu l'affiche (« en attente »). Cette note est gardée tant que le jeu existe ; après la suppression d'un compte, son identifiant y est remplacé par le mot « supprime ».</p>
+
+      <h3><span class="sub">1.5</span>Achats</h3>
+      <p>Les achats passent par <strong>Google Play</strong>. C'est Google qui encaisse : nous ne voyons <strong>jamais</strong> votre numéro de carte, vos coordonnées bancaires ni votre adresse.</p>
+      <p>Au moment de l'achat, le jeu joint à la commande une <strong>étiquette de compte</strong> : une empreinte chiffrée de votre identifiant de compte, qui ne permet pas de le retrouver. Après le paiement, le jeu envoie à notre serveur le produit acheté et le <strong>jeton d'achat</strong> remis par Google. Le serveur vérifie l'achat <strong>auprès de Google</strong> avant de vous créditer.</p>
+      <p>Pour chaque achat crédité, le serveur garde un <strong>justificatif</strong> : une empreinte du jeton d'achat (le jeton lui-même n'est jamais gardé), votre identifiant de compte, le produit, la quantité, ce qui a été crédité (gemmes ou jours de passe), le numéro de commande Google, la date, et s'il s'agit d'un achat d'essai. Il sert à prouver ce que vous avez reçu, à créditer chaque achat une seule fois, et à lutter contre la fraude.</p>
+
+      <h3><span class="sub">1.6</span>Publicités</h3>
+      <p>Le jeu propose des <strong>publicités récompensées</strong> — toujours à votre initiative, jamais imposées — pour ouvrir le coffre du jour ou pour vous relever en combat. Elles sont diffusées par <strong>Google AdMob</strong>, avec la bibliothèque de publicités de Google (dite « Next-Gen »).</p>
+      <p><strong>Consentement.</strong> Au lancement, le jeu demande à Google s'il faut recueillir votre accord (c'est le cas en Europe). Si oui, le formulaire de consentement de Google s'affiche. Vous pouvez changer votre choix à tout moment : <strong>Paramètres → Options de confidentialité</strong> (le bouton apparaît quand Google l'exige ; il est aussi proposé sur le coffre du jour).</p>
+      <p><strong>Ce que la bibliothèque de Google collecte.</strong> D'après la page officielle de Google (<a href="https://developers.google.com/admob/android/next-gen/privacy/play-data-disclosure" rel="noopener">developers.google.com/admob/android/next-gen/privacy/play-data-disclosure</a>), elle collecte et partage, « for advertising, analytics, and fraud prevention purposes » :</p>
       <ul>
-        <li>le <strong>nom de votre école</strong> et son <strong>emblème</strong> ;</li>
-        <li>vos <strong>trophées</strong>, votre <strong>ligue</strong> et vos titres d'Immortel ;</li>
-        <li>vos <strong>cinq meilleurs gladiateurs</strong> : leur nom, leur classe, leur niveau, leurs statistiques et leur équipement ;</li>
-        <li>votre <strong>code d'ami</strong>, qui permet de vous défier ;</li>
-        <li>un <strong>indicateur de présence</strong> : l'heure de votre dernier passage sur l'écran du défi. C'est lui qui vous affiche « en ligne » chez vos amis.</li>
+        <li>l'<strong>adresse IP</strong> de l'appareil, qui peut servir à estimer sa position approximative ;</li>
+        <li>vos <strong>interactions</strong> avec les annonces et l'application (lancement, touchers, vidéos vues) ;</li>
+        <li>des <strong>informations de diagnostic</strong> (performances de l'application et de la bibliothèque) ;</li>
+        <li>des <strong>identifiants de l'appareil et des comptes</strong> : l'identifiant publicitaire Android, l'identifiant « app set » (propre aux applications d'un même éditeur sur l'appareil) et, le cas échéant, d'autres identifiants liés aux comptes connectés sur l'appareil.</li>
       </ul>
+      <p>Vous pouvez réinitialiser ou supprimer l'identifiant publicitaire dans les réglages Android (<em>Paramètres → Confidentialité → Annonces</em> ; l'intitulé varie selon les téléphones). Politique de confidentialité de Google, qui couvre AdMob : <a href="https://policies.google.com/privacy" rel="noopener">policies.google.com/privacy</a>.</p>
+      <p><strong>Confirmation de la récompense.</strong> Avant chaque pub, notre serveur crée un <strong>ticket</strong> à usage unique. Le jeu remet à Google votre identifiant de compte et ce ticket. Quand vous avez regardé la pub jusqu'au bout, Google envoie à notre serveur une <strong>confirmation signée</strong> (que nous appelons « rappel ») qui contient votre identifiant de compte, le ticket, l'emplacement de la pub dans le jeu et un numéro de transaction. Le serveur garde ce rappel pour ne verser la récompense qu'une fois. Une pub fermée avant la fin ne donne rien.</p>
 
-      <div class="note warn">
-        <span class="tag">À lire avant de nommer votre école</span>
-        <p><strong>Le nom de votre école et celui de vos gladiateurs sont publics.</strong> N'y mettez aucune donnée personnelle : ni votre nom réel, ni votre adresse e-mail, ni rien qui permette de vous identifier. Vous pouvez changer le nom de votre école à tout moment depuis Paramètres.</p>
-        <p>Votre adresse e-mail, elle, n'est <strong>jamais</strong> publiée dans cet annuaire.</p>
-      </div>
+      <h3><span class="sub">1.7</span>Journaux techniques</h3>
+      <p>Notre hébergeur (Google Cloud) tient des journaux techniques du serveur : identifiant de compte, adresse IP, appels faits, erreurs. Ils servent au fonctionnement et à la sécurité du service, et s'effacent après 30 jours. Google Cloud tient à part un journal des actions d'administration du projet (gardé 400 jours) : il note ce que nous faisons sur le serveur, pas vos parties.</p>
+      <p>Nous n'avons ajouté au jeu aucun outil de mesure d'audience ni de rapport de plantage. Seule la bibliothèque de publicités de Google collecte des données de ce type, pour son propre compte (§ 1.6).</p>
 
-      <h3><span class="sub">1.4</span>Défis entre amis, liste d'amis et présence</h3>
-      <p>Le défi se joue <strong>en direct</strong> : les deux joueurs regardent le combat au même moment. Quand vous ouvrez un défi, un document de duel est créé — les deux écoles concernées, le combat calculé, l'instant de départ commun et les émoticônes échangées pendant le combat. Il n'est lisible que par les <strong>deux joueurs du duel</strong>, et il expire de lui-même.</p>
-      <p><strong>Vos amitiés sont enregistrées en ligne, et voici exactement où.</strong> Quand vous demandez quelqu'un en ami, un document est créé qui porte vos deux identifiants de compte, vos deux noms d'école et l'état de la demande : en attente, acceptée, refusée, ou rompue. Il n'est lisible que par <strong>vous deux</strong> — aucun autre joueur ne peut savoir qui figure dans votre liste.</p>
-      <p>C'est ce document, et lui seul, qui permet à l'autre appareil d'apprendre que vous avez accepté sa demande, ou que vous l'avez retiré de vos amis. Sans lui, un retrait ne vaudrait que pour vous et l'autre continuerait de vous voir dans ses amis.</p>
-      <p>Ces documents s'effacent d'eux-mêmes : <strong>7 jours</strong> pour une demande sans réponse ou refusée, <strong>30 jours</strong> après un retrait. Une amitié vivante est conservée tant qu'elle dure.</p>
-      <p>L'ordre de votre liste et ce que votre écran en affiche restent, eux, dans votre sauvegarde.</p>
-      <p><strong>La présence, en revanche, est publique</strong> au même titre que le reste de votre fiche d'annuaire (§ 1.3). Concrètement : une seule valeur, l'heure de votre dernier passage sur l'écran du défi. Elle est écrasée à chaque mise à jour — nous ne gardons aucun historique de vos horaires de jeu — et elle disparaît avec votre fiche d'annuaire. « En ligne » signifie donc « cette personne est sur l'écran du défi en ce moment », et rien de plus : le jeu ne dit jamais si votre téléphone est allumé ni ce que vous faites ailleurs.</p>
-      <p><strong>C'est votre code d'ami qui décide.</strong> Le donner à quelqu'un, c'est accepter qu'il vous voie en ligne et vous défie. Ne le publiez pas si vous ne le souhaitez pas.</p>
-
-      <h3><span class="sub">1.4 bis</span>Tournois</h3>
-      <p>Quand vous inscrivez une équipe à un tournoi, une <strong>inscription</strong> est publiée : votre identifiant de compte, le <strong>nom et l'emblème de votre école</strong> et l'<strong>instantané de l'équipe inscrite</strong> (noms, classes, niveaux, statistiques, équipement de vos gladiateurs). Elle est <strong>lisible par tout joueur connecté</strong>, car chaque téléphone reconstruit le même tableau de tournoi à partir des inscriptions. Elle peut aussi servir à compléter le tableau des tournois des heures suivantes. Elle s'efface d'elle-même <strong>48 heures</strong> après l'heure du tournoi.</p>
-
-      <h3><span class="sub">1.5</span>Mesures d'usage</h3>
-      <p>Nous enregistrons des <strong>événements de jeu anonymes</strong> pour comprendre ce qui fonctionne et corriger ce qui coince : première ouverture, étapes du tutoriel, fin de combat, coffre ouvert, énergie épuisée, achat, publicité regardée, ouverture de la passe de saison, plantage.</p>
-      <p>Cette liste est <strong>fermée dans le code</strong> : un événement qui n'y figure pas n'est pas envoyé. Les propriétés jointes sont elles aussi limitées à une liste fermée — mode de jeu, format, durée, rareté, montant. <strong>Le jeton d'achat Google en est explicitement exclu.</strong></p>
-      <p>Ces mesures sont rattachées à votre identifiant de compte, pas à votre nom.</p>
-
-      <h3><span class="sub">1.6</span>Achats</h3>
-      <p>Les achats passent par <strong>Google Play Billing</strong>. Nous ne voyons <strong>jamais</strong> votre numéro de carte ni vos coordonnées bancaires : ils sont traités par Google et ne transitent pas par nous. Nous recevons de Google un jeton d'achat, qui sert uniquement à vous créditer ce que vous avez acheté.</p>
-
-      <h3><span class="sub">1.7</span>Publicité</h3>
-      <p>Le jeu propose des <strong>publicités récompensées</strong> — toujours à votre initiative, jamais imposées. Elles sont diffusées par <strong>Google AdMob</strong>, qui peut utiliser un identifiant publicitaire pour choisir les annonces et mesurer leur diffusion. Vous pouvez réinitialiser ou supprimer cet identifiant dans les réglages Android (<em>Paramètres → Confidentialité → Annonces</em>).</p>
-      <p>Politique de confidentialité de Google, qui couvre AdMob : <a href="https://policies.google.com/privacy" rel="noopener">policies.google.com/privacy</a></p>
+      <h3><span class="sub">1.8</span>Données de l'ancien jeu (GLORIA)</h3>
+      <p>Lanistara remplace l'ancien jeu GLORIA, publié sous la même fiche Google Play. Les données que l'ancien jeu avait enregistrées sur le serveur y sont encore : profil, sauvegarde et statistiques, duels, demandes d'amis, tournois et, si vous aviez créé un compte avec une adresse e-mail, ce compte de connexion. Le nouveau jeu ne les lit pas et ne les utilise pas.</p>
+      <p>Si vous supprimez votre compte depuis le jeu, votre ancien profil, votre ancienne sauvegarde et vos anciennes statistiques liés au même compte sont effacés. Pour faire effacer tout le reste (duels, demandes d'amis, tournois, ancien compte par adresse e-mail), écrivez-nous (§ 5) : nous l'effaçons sous 30 jours.</p>
     </section>
 
     <section id="s2">
@@ -407,14 +409,15 @@ footer .docs a[aria-current]{color:var(--ink);text-decoration:none;font-weight:7
             <tr><th scope="col">Donnée</th><th scope="col">Pourquoi</th><th scope="col">Base légale (RGPD)</th></tr>
           </thead>
           <tbody>
-            <tr><td>Identifiant anonyme, sauvegarde</td><td>fournir le jeu, ne pas perdre votre partie</td><td>exécution du contrat</td></tr>
-            <tr><td>E-mail du compte lié</td><td>retrouver votre école sur un autre appareil</td><td>exécution du contrat</td></tr>
-            <tr><td>Annuaire public des écoles</td><td>permettre le mode Classé et les défis</td><td>exécution du contrat</td></tr>
-            <tr><td>Demandes et amitiés</td><td>permettre les défis entre amis, et rendre un retrait réciproque</td><td>exécution du contrat</td></tr>
-            <tr><td>Indicateur de présence</td><td>savoir si un ami peut jouer un défi maintenant</td><td>exécution du contrat</td></tr>
-            <tr><td>Mesures d'usage</td><td>corriger les défauts, régler l'équilibrage</td><td>intérêt légitime</td></tr>
-            <tr><td>Achats</td><td>vous livrer ce que vous avez payé, obligations comptables</td><td>contrat, obligation légale</td></tr>
-            <tr><td>Publicité</td><td>financer la version gratuite</td><td>consentement</td></tr>
+            <tr><td>Identifiant de compte, partie</td><td>fournir le jeu, ne pas perdre votre partie</td><td>exécution du contrat</td></tr>
+            <tr><td>Compte Google lié</td><td>retrouver votre partie sur un autre téléphone ; acheter sans risque de perte</td><td>exécution du contrat</td></tr>
+            <tr><td>Hôtel des ventes (annonces, journal, suivi des échanges, ventes mises en attente)</td><td>permettre les échanges entre joueurs ; lutter contre la fraude</td><td>exécution du contrat ; intérêt légitime (fraude)</td></tr>
+            <tr><td>Enregistrement des combats, journal des anomalies</td><td>vérifier que le combat est juste ; corriger le jeu ; repérer la triche</td><td>exécution du contrat ; intérêt légitime (triche)</td></tr>
+            <tr><td>Achats et justificatifs</td><td>vous livrer ce que vous avez payé, une fois ; preuve ; fraude ; obligations comptables</td><td>contrat ; intérêt légitime ; obligation légale</td></tr>
+            <tr><td>Publicités (Google AdMob)</td><td>financer le jeu gratuit ; vous donner la récompense</td><td>consentement (recueilli par le formulaire de Google, là où il est exigé)</td></tr>
+            <tr><td>Tickets et rappels de pub</td><td>verser la récompense une seule fois</td><td>exécution du contrat ; intérêt légitime (fraude)</td></tr>
+            <tr><td>Journaux techniques</td><td>fonctionnement et sécurité du service</td><td>intérêt légitime</td></tr>
+            <tr><td>Données de l'ancien jeu</td><td>aucun usage ; gardées jusqu'à leur effacement (§ 1.8)</td><td>intérêt légitime (ne pas effacer sans demande le compte d'un ancien joueur)</td></tr>
           </tbody>
         </table>
       </div>
@@ -424,11 +427,13 @@ footer .docs a[aria-current]{color:var(--ink);text-decoration:none;font-weight:7
       <h2><span class="num">3.</span>À qui vos données sont transmises</h2>
       <p>Nous ne vendons ni ne louons vos données. Elles sont traitées par :</p>
       <ul>
-        <li><strong>Google Firebase</strong> (Authentication, Cloud Firestore) — compte et sauvegarde ;</li>
-        <li><strong>Google Play Billing</strong> — achats ;</li>
-        <li><strong>Google AdMob</strong> — publicités récompensées ;</li>
-        <li><strong>les autres joueurs</strong>, pour les seules informations du § 1.3.</li>
+        <li><strong>Google Firebase et Google Cloud</strong> (Authentication, Cloud Firestore, Cloud Functions) — compte, partie, serveur du jeu. La base de données est en Europe (emplacement multirégional « eur3 ») et le serveur aussi en Europe (région europe-west1) ;</li>
+        <li><strong>Google</strong>, pour la connexion avec un compte Google ;</li>
+        <li><strong>Google Play</strong> — achats et vérification des achats ;</li>
+        <li><strong>Google AdMob</strong> — publicités récompensées et confirmation des récompenses ;</li>
+        <li><strong>les autres joueurs</strong>, pour vos seules annonces à l'hôtel des ventes, sans votre identifiant ni votre nom.</li>
       </ul>
+      <p>Les pages que vous lisez sont hébergées par GitHub Pages et chargent leurs polices de caractères chez Google Fonts : ces deux services reçoivent l'adresse IP de votre appareil quand vous les ouvrez.</p>
       <p>Ces services peuvent traiter des données hors de l'Union européenne. Google s'appuie pour cela sur les clauses contractuelles types de la Commission européenne.</p>
     </section>
 
@@ -440,11 +445,17 @@ footer .docs a[aria-current]{color:var(--ink);text-decoration:none;font-weight:7
             <tr><th scope="col">Donnée</th><th scope="col">Durée</th><th scope="col">Précision</th></tr>
           </thead>
           <tbody>
-            <tr><td>Sauvegarde et compte</td><td>24 mois</td><td>après votre dernière connexion. Passé ce délai, la sauvegarde, la fiche d'annuaire et les duels sont supprimés.</td></tr>
-            <tr><td>Inscriptions de tournoi</td><td>48 heures</td><td>après l'heure du tournoi.</td></tr>
-            <tr><td>Demandes d'ami</td><td>7 à 30 jours</td><td>7 jours sans réponse ou après un refus, 30 jours après un retrait. Une amitié vivante est conservée tant qu'elle dure, puis suit le sort de votre compte.</td></tr>
-            <tr><td>Mesures d'usage</td><td>14 mois</td><td>—</td></tr>
-            <tr><td>Justificatifs d'achat</td><td>10 ans</td><td>durée imposée par les obligations comptables françaises. Ils ne contiennent aucune coordonnée bancaire.</td></tr>
+            <tr><td>Compte et partie</td><td>tant que votre compte existe</td><td>jusqu'à sa suppression (§ 5).</td></tr>
+            <tr><td>Enregistrements de combat</td><td>7 jours</td><td>effacés automatiquement par la base de données, en général dans les jours qui suivent.</td></tr>
+            <tr><td>Journal des anomalies de combat</td><td>tant que votre compte existe</td><td>effacé avec le compte.</td></tr>
+            <tr><td>Tickets de pub</td><td>7 jours</td><td>après leur création, effacés automatiquement par la base de données, en général dans les jours qui suivent.</td></tr>
+            <tr><td>Suivi des échanges entre deux comptes</td><td>jusqu'à la suppression de l'un des deux comptes</td><td>seules les ventes des 7 derniers jours y sont comptées.</td></tr>
+            <tr><td>Journal des ventes de l'hôtel des ventes</td><td>tant que le jeu existe</td><td>après la suppression d'un compte, son identifiant y est remplacé par le mot « supprime ».</td></tr>
+            <tr><td>Notes des ventes suspectes</td><td>tant que le jeu existe</td><td>après la suppression d'un compte, son identifiant y est remplacé par le mot « supprime ».</td></tr>
+            <tr><td>Rappels de pub confirmés</td><td>tant que le jeu existe</td><td>ils empêchent qu'une même pub soit payée deux fois ; après la suppression du compte, sans votre identifiant.</td></tr>
+            <tr><td>Justificatifs d'achat</td><td>10 ans</td><td>durée de conservation des pièces comptables (article L123-22 du Code de commerce). Après la suppression du compte, gardés sans votre identifiant. Ils ne contiennent aucune coordonnée bancaire.</td></tr>
+            <tr><td>Journaux techniques</td><td>30 jours</td><td>effacés automatiquement par notre hébergeur.</td></tr>
+            <tr><td>Données de l'ancien jeu</td><td>jusqu'à leur effacement</td><td>en partie avec la suppression du compte, le reste sur demande (§ 1.8).</td></tr>
           </tbody>
         </table>
       </div>
@@ -452,30 +463,31 @@ footer .docs a[aria-current]{color:var(--ink);text-decoration:none;font-weight:7
 
     <section id="s5">
       <h2><span class="num">5.</span>Vos droits</h2>
-      <p>Vous pouvez à tout moment demander l'<strong>accès</strong> à vos données, leur <strong>rectification</strong>, leur <strong>suppression</strong>, leur <strong>portabilité</strong>, ou vous <strong>opposer</strong> à leur traitement.</p>
+      <p>Vous pouvez à tout moment demander l'<strong>accès</strong> à vos données, leur <strong>rectification</strong>, leur <strong>suppression</strong>, leur <strong>portabilité</strong>, ou vous <strong>opposer</strong> à leur traitement. Pour les publicités, vous pouvez <strong>retirer votre consentement</strong> à tout moment (Paramètres → Options de confidentialité).</p>
+      <p>Écrivez à <a href="mailto:gloria.dev.app@gmail.com">gloria.dev.app@gmail.com</a> en indiquant votre <strong>identifiant de compte</strong> (Paramètres → Compte et mentions). Si votre compte est lié à Google, écrivez depuis cette adresse Google : si vous n'avez plus l'identifiant, c'est par elle que nous retrouvons votre compte. Un compte invité jamais lié à Google ne peut être retrouvé que par son identifiant.</p>
 
       <h3>Supprimer votre compte et vos données</h3>
-      <p>Depuis le jeu : <strong>Paramètres → Compte → Supprimer mon compte</strong>. La suppression est immédiate pour votre sauvegarde, votre fiche d'annuaire, vos mesures d'usage, vos amitiés et vos inscriptions aux tournois à venir. Vos inscriptions aux tournois déjà joués s'effacent sous 48 heures (les tableaux des autres joueurs en dépendent). Si votre compte est lié à une adresse e-mail et que Google exige une connexion récente pour le supprimer, le jeu vous demande de vous reconnecter puis de recommencer : l'adresse est alors effacée à son tour.</p>
-      <p>Ou par écrit à <a href="mailto:gloria.dev.app@gmail.com">gloria.dev.app@gmail.com</a>, depuis l'adresse liée à votre compte, ou en indiquant votre <strong>code d'ami</strong> si votre compte est anonyme. Nous supprimons alors sous 30 jours votre sauvegarde, votre fiche d'annuaire et vos mesures d'usage. Vos <strong>duels</strong> et vos <strong>amitiés</strong> appartiennent à deux joueurs : les effacer priverait l'autre de son propre historique. Ils expirent d'eux-mêmes, aux durées indiquées au § 4.</p>
+      <p>Depuis le jeu : <strong>Paramètres → Compte et mentions → SUPPRIMER MON COMPTE</strong>, puis tapez le mot SUPPRIMER. La suppression est immédiate. Ou par courriel, sous 30 jours. Le détail — ce qui est effacé, ce qui est gardé sans votre identifiant et pourquoi — est sur la page <a href="suppression.html">Supprimer son compte</a>.</p>
 
       <div class="note warn">
         <span class="tag">Irréversible</span>
-        <p><strong>La suppression est définitive.</strong> Votre progression, vos gladiateurs et vos achats non consommés sont perdus et ne peuvent pas être restaurés.</p>
+        <p><strong>La suppression est définitive.</strong> Vos gladiateurs, objets, ressources, or, <strong>gemmes (même achetées)</strong>, votre <strong>passe en cours</strong> et vos ventes en cours sont perdus et ne peuvent être ni restaurés ni remboursés.</p>
       </div>
 
-      <p>Vous pouvez aussi vous déconnecter à tout moment (Paramètres → Compte) : cet appareil repart alors sur une école vide, mais votre école reste en ligne.</p>
       <p>Si vous estimez que vos droits ne sont pas respectés, vous pouvez saisir la CNIL (<a href="https://www.cnil.fr" rel="noopener">cnil.fr</a>) ou l'autorité de contrôle de votre pays.</p>
     </section>
 
     <section id="s6">
-      <h2><span class="num">6.</span>Enfants</h2>
-      <p>Lanistara est destiné aux joueurs de <strong>16 ans et plus</strong>. Nous ne collectons pas sciemment de données concernant une personne plus jeune. Si vous êtes parent et pensez que votre enfant nous a transmis des données, écrivez-nous : nous les supprimerons.</p>
-      <p>Pourquoi 16 et non 15 : le RGPD laisse chaque pays de l'Union européenne fixer entre 13 et 16 ans l'âge auquel un mineur consent seul au traitement de ses données — la publicité récompensée, notamment. La France a retenu 15 ans, d'autres pays 16. <strong>16 ans est le plafond</strong> : au-delà, aucun pays de l'Union n'exige l'accord d'un parent. Nous n'avons donc jamais à vous le demander, où que vous viviez en Europe.</p>
+      <h2><span class="num">6.</span>Mineurs</h2>
+      <p>Lanistara est destiné aux joueurs de <strong>13 ans et plus</strong>. Nous ne collectons pas sciemment de données concernant un enfant plus jeune. Si vous êtes parent et pensez que votre enfant nous a transmis des données, écrivez-nous : nous les supprimerons.</p>
+      <p>En France, un mineur peut consentir seul au traitement de ses données par un service en ligne à partir de <strong>15 ans</strong> ; en dessous, l'accord d'un titulaire de l'autorité parentale est aussi nécessaire (article 45 de la loi Informatique et Libertés). D'autres pays de l'Union fixent cet âge entre 13 et 16 ans.</p>
+      <p><strong>Si vous avez moins de 15 ans</strong>, demandez à un parent avant de répondre au formulaire de consentement aux publicités. Hors de France, la même règle vaut avec l'âge fixé dans votre pays.</p>
+      <p>Un joueur de moins de 18 ans doit avoir l'accord d'un parent avant tout achat ; le jeu le rappelle avant chaque paiement.</p>
     </section>
 
     <section id="s7">
       <h2><span class="num">7.</span>Sécurité</h2>
-      <p>Les échanges avec nos serveurs passent par HTTPS. L'accès à votre sauvegarde est protégé par des règles de sécurité Firestore : votre document de sauvegarde n'est lisible et modifiable que par votre compte. Seules les informations du § 1.3 sont volontairement lisibles par les autres joueurs.</p>
+      <p>Les échanges avec nos serveurs passent par HTTPS. Des règles de sécurité de la base de données font que votre téléphone ne peut lire que les documents de votre propre compte (et les réglages communs du jeu, qui ne contiennent aucune donnée personnelle), et n'écrit rien directement : toute modification passe par notre serveur, qui la vérifie. Le jeton d'achat n'est jamais gardé ; seule son empreinte l'est.</p>
       <p>Aucun système n'est infaillible : nous ne pouvons pas garantir une sécurité absolue.</p>
     </section>
 
@@ -499,8 +511,8 @@ footer .docs a[aria-current]{color:var(--ink);text-decoration:none;font-weight:7
   </article>
 
   <footer>
-    <p class="docs"><a href="index.html" aria-current="page">Politique de confidentialité</a> · <a href="conditions.html">Conditions générales</a> · <a href="mentions-legales.html">Mentions légales</a></p>
-    Lanistara — <code>com.lbalass.gloria</code> · Politique de confidentialité du 4 octobre 2026.
+    <p class="docs"><a href="index.html" aria-current="page">Politique de confidentialité</a> · <a href="conditions.html">Conditions générales</a> · <a href="mentions-legales.html">Mentions légales</a> · <a href="suppression.html">Supprimer son compte</a></p>
+    Lanistara — <code>com.lbalass.gloria</code> · Politique de confidentialité du 13 novembre 2026.
   </footer>
 
 </div>
